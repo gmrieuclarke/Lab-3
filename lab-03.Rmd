@@ -147,14 +147,7 @@ geom_line()
 
 
 ```{r working-line-plot}
-ggplot(data = staff_long,
-       mapping = aes(x = Year, 
-                     y = percent, 
-                     colour = faculty_type)) +
-geom_line()
-labs(title= "staff employment trends over years",
-     x= "Year",
-     y= "Percent")
+
 
 
 
@@ -164,7 +157,14 @@ labs(title= "staff employment trends over years",
 ## Exercise 6
 
 ```{r better-line-plot}
-# Write your code for Exercise 6 here
+ggplot(data = staff_long,
+       mapping = aes(x = Year, 
+                     y = percent, 
+                     colour = faculty_type)) +
+geom_line()
+labs(title= "staff employment trends over years",
+     x= "Year",
+     y= "Percent")
 
 
 

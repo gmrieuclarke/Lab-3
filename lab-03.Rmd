@@ -133,8 +133,16 @@ geom_line()
 ```{r mutate-year}
 ## Uncomment and complete the following code
 
-#staff_long <- staff_long %>%
-#  mutate(year = ______(year))
+staff_long <- staff_long %>%
+  mutate(Year = as.numeric(Year))
+
+
+ggplot(data = staff_long,
+       mapping = aes(x = Year, 
+                     y = percent, 
+                     colour = faculty_type)) +
+geom_line()
+
 ```
 
 
